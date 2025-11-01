@@ -1,0 +1,50 @@
+# The URL the site will be built for
+base_url = "https://posts.dhopcs.org"
+
+# The site title
+title = "dhopcs blog"
+
+# Whether to automatically compile all Sass files in the sass directory
+compile_sass = true
+
+# Whether to build a search index to be used later on by a JavaScript library
+build_search_index = true
+
+# The site theme to use.
+theme = "tilde"
+
+# Generate RSS/Atom feed
+generate_feeds = true
+
+# The filename for the feed. Used as the template filename, too.
+# Defaults to "atom.xml", which has a built-in template that renders an Atom 1.0 feed.
+# There is also a built-in template "rss.xml" that renders an RSS 2.0 feed.
+feed_filenames = ["atom.xml"]
+
+# The taxonomies to be rendered for the site and their configuration.
+taxonomies = [
+    {name = "tags", feed = true},
+    {name = "categories", feed = true},
+]
+
+[markdown]
+# Whether to do syntax highlighting
+# Theme can be customised by setting the `highlight_theme` variable to a theme supported by Zola
+highlight_code = true
+
+# The theme to use for code highlighting.
+# See https://www.getzola.org/documentation/getting-started/configuration/#syntax-highlighting
+highlight_theme = "dracula"
+
+# Enable smart punctuation (converts quotes, dashes, etc.)
+smart_punctuation = true
+
+[extra]
+# Put all your custom variables here
+homepage = "https://dhopcs.org"
+subtitle = "22 he/they 🇬🇧"
+git_source = "https://git.dhopcs.org/blog"
+github = "https://github.com/dhopcs"
+author = "Tyler Thompson"
+email = "me@dhopcs.org"
+license = "CC BY-SA 4.0"

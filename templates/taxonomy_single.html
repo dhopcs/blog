@@ -1,0 +1,21 @@
+{% extends "index.html" %}
+
+{% block title %}{{ term.name }} - {{ config.title }}{% endblock title %}
+
+{% block main %}
+<h1>Posts tagged with "{{ term.name }}"</h1>
+<div class="border"></div>
+
+<ul>
+  {% for page in term.pages | reverse %}
+  <li>
+    <a href="{{ page.permalink | safe }}">
+      {{ page.date | date(format="%Y-%m-%d") }} => {{ page.title }}
+    </a>
+    {% if page.description %}
+    <p class="description">{{ page.description }}</p>
+    {% endif %}
+  </li>
+  {% endfor %}
+</ul>
+{% endblock main %}

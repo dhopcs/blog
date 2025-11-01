@@ -1,0 +1,16 @@
+{% extends "index.html" %}
+
+{% block title %}All {{ taxonomy.name }} - {{ config.title }}{% endblock title %}
+
+{% block main %}
+<h1>All {{ taxonomy.name }}</h1>
+<div class="border"></div>
+
+<ul>
+  {% for term in terms %}
+  <li>
+    <a href="{{ term.permalink | safe }}">{{ term.name }}</a> ({{ term.pages | length }})
+  </li>
+  {% endfor %}
+</ul>
+{% endblock main %}

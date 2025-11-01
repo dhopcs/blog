@@ -1,0 +1,404 @@
+// Custom styles for the blog
+
+// Header with profile picture
+.header-content {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  margin-top: 1rem;
+
+  .header-profile-picture {
+    width: 96px;
+    height: 96px;
+    border-radius: 10px;
+    border: 2px solid #ff79c6;
+    box-shadow: 0 2px 4px rgba(255, 121, 197, 0.616);
+    flex-shrink: 0;
+  }
+
+  .header-text {
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+  }
+}
+
+// Homepage styles
+.homepage {
+  .hero {
+    text-align: left;
+    margin: 3rem 0;
+
+    .hero-title {
+      font-size: 3rem;
+      margin-bottom: 1rem;
+      font-weight: bold;
+      color: #ff79c6;
+    }
+
+    .hero-subtitle {
+      font-size: 1.1rem;
+      line-height: 1.8;
+      max-width: 700px;
+      margin: 0;
+      color: rgba(255, 255, 255, 0.9);
+
+      p {
+        margin: 1rem 0;
+      }
+
+      strong {
+        color: #8be9fd;
+      }
+    }
+  }
+
+  .links-section {
+    margin: 4rem 0;
+
+    h2 {
+      font-size: 1.5rem;
+      margin-bottom: 1.5rem;
+      color: #ffffff;
+    }
+
+    .social-links {
+      display: flex;
+      gap: 1.5rem;
+      flex-wrap: wrap;
+
+      .link-item {
+        a {
+          display: inline-flex;
+          align-items: center;
+          gap: 0.6rem;
+          padding: 0.75rem 1.5rem;
+          background: rgba(255, 255, 255, 0.05);
+          border: 1px solid rgba(255, 255, 255, 0.1);
+          border-radius: 6px;
+          text-decoration: none;
+          color: inherit;
+          transition: all 0.2s ease;
+          font-size: 1rem;
+
+          i {
+            font-size: 1.25rem;
+            color: #bd93f9;
+          }
+
+          .link-label {
+            font-weight: 500;
+            color: #f8f8f2;
+          }
+
+          &:hover {
+            background: rgba(255, 255, 255, 0.1);
+            border-color: #bd93f9;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(189, 147, 249, 0.2);
+
+            i {
+              color: #ff79c6;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .recent-posts {
+    margin: 4rem 0;
+
+    h2 {
+      font-size: 1.5rem;
+      margin-bottom: 1.5rem;
+      color: #ffffff;
+    }
+
+    ul {
+      list-style: none;
+      padding: 0;
+
+      li {
+        margin-bottom: 1.5rem;
+        padding-bottom: 1.5rem;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+
+        &:last-child {
+          border-bottom: none;
+        }
+
+        a {
+          text-decoration: none;
+          display: block;
+
+          &:hover {
+            .post-title {
+              color: #ff79c6;
+            }
+          }
+
+          .post-date {
+            color: #8be9fd;
+            font-family: monospace;
+            font-size: 0.9rem;
+          }
+
+          .post-arrow {
+            color: #50fa7b;
+            margin: 0 0.5rem;
+          }
+
+          .post-title {
+            color: #f8f8f2;
+            transition: color 0.2s ease;
+          }
+        }
+      }
+    }
+
+    .view-all {
+      margin-top: 2rem;
+      text-align: center;
+
+      a {
+        color: #bd93f9;
+        text-decoration: none;
+        font-weight: bold;
+
+        &:hover {
+          color: #ff79c6;
+          text-decoration: underline;
+        }
+      }
+    }
+  }
+}
+
+// Note/callout boxes
+.note {
+  padding: 1rem;
+  margin: 1.5rem 0;
+  border-left: 4px solid;
+  background: rgba(255, 255, 255, 0.05);
+
+  &.info {
+    border-color: #8be9fd;
+  }
+
+  &.warning {
+    border-color: #ffb86c;
+  }
+
+  &.danger {
+    border-color: #ff5555;
+  }
+
+  &.success {
+    border-color: #50fa7b;
+  }
+
+  strong {
+    display: block;
+    margin-bottom: 0.5rem;
+  }
+}
+
+// Tags and categories
+.tags, .categories {
+  margin: 1rem 0;
+  font-size: 0.9rem;
+
+  a {
+    padding: 0.2rem 0.5rem;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 3px;
+    text-decoration: none;
+
+    &:hover {
+      background: rgba(255, 255, 255, 0.2);
+    }
+  }
+}
+
+// Table of contents
+.toc {
+  background: rgba(255, 255, 255, 0.05);
+  padding: 1rem;
+  margin: 1.5rem 0;
+  border-radius: 4px;
+
+  h2 {
+    margin-top: 0;
+    font-size: 1.2rem;
+  }
+
+  ul {
+    margin: 0.5rem 0;
+    padding-left: 1.5rem;
+  }
+
+  a {
+    text-decoration: none;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}
+
+// Better code block styling
+pre {
+  padding: 1rem;
+  overflow-x: auto;
+  border-radius: 4px;
+
+  code {
+    font-family: 'Fira Code', 'Monaco', 'Consolas', monospace;
+    font-size: 0.9rem;
+    line-height: 1.5;
+  }
+}
+
+// Inline code
+code {
+  background: rgba(255, 255, 255, 0.1);
+  padding: 0.2rem 0.4rem;
+  border-radius: 3px;
+  font-family: 'Fira Code', 'Monaco', 'Consolas', monospace;
+  font-size: 0.9em;
+}
+
+pre code {
+  background: none;
+  padding: 0;
+}
+
+// Tables
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 1.5rem 0;
+
+  th, td {
+    padding: 0.75rem;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    text-align: left;
+  }
+
+  th {
+    background: rgba(255, 255, 255, 0.1);
+    font-weight: bold;
+  }
+
+  tr:nth-child(even) {
+    background: rgba(255, 255, 255, 0.05);
+  }
+}
+
+// Task lists
+.task-list {
+  list-style: none;
+  padding-left: 0;
+
+  li {
+    padding-left: 1.5rem;
+    position: relative;
+
+    input[type="checkbox"] {
+      position: absolute;
+      left: 0;
+      top: 0.25rem;
+    }
+  }
+}
+
+// Video wrapper for responsive embeds
+.video-wrapper {
+  position: relative;
+  padding-bottom: 56.25%; // 16:9 aspect ratio
+  height: 0;
+  overflow: hidden;
+  margin: 1.5rem 0;
+
+  iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+}
+
+// Figure/image captions
+figure {
+  margin: 1.5rem 0;
+  text-align: center;
+
+  img {
+    max-width: 100%;
+    height: auto;
+  }
+
+  figcaption {
+    margin-top: 0.5rem;
+    font-size: 0.9rem;
+    font-style: italic;
+    color: rgba(255, 255, 255, 0.7);
+  }
+}
+
+// Description text in post lists
+.description {
+  font-size: 0.9rem;
+  color: rgba(255, 255, 255, 0.7);
+  margin: 0.25rem 0 0.5rem 0;
+}
+
+// Blockquotes
+blockquote {
+  border-left: 4px solid #bd93f9;
+  padding-left: 1rem;
+  margin: 1.5rem 0;
+  font-style: italic;
+  color: rgba(255, 255, 255, 0.9);
+
+  p {
+    margin: 0.5rem 0;
+  }
+}
+
+// Horizontal rules
+hr {
+  border: none;
+  border-top: 2px solid rgba(255, 255, 255, 0.2);
+  margin: 2rem 0;
+}
+
+// Improve article body readability
+.articleBody {
+  line-height: 1.7;
+
+  h2 {
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+  }
+
+  h3 {
+    margin-top: 1.5rem;
+    margin-bottom: 0.75rem;
+  }
+
+  p {
+    margin: 1rem 0;
+  }
+
+  ul, ol {
+    margin: 1rem 0;
+    padding-left: 2rem;
+
+    li {
+      margin: 0.5rem 0;
+    }
+  }
+}
