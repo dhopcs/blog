@@ -43,7 +43,7 @@ smart_punctuation = true
 # Put all your custom variables here
 homepage = "https://dhopcs.org"
 subtitle = "22 he/they 🇬🇧"
-git_source = "https://git.dhopcs.org/blog"
+git_source = "https://github.com/dhopcs/blog"
 github = "https://github.com/dhopcs"
 author = "Tyler Thompson"
 email = "me@dhopcs.org"
